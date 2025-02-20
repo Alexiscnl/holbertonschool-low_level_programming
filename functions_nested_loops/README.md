@@ -4,12 +4,12 @@
 
 Read or watch the following:
 
-* [Nested while loops](link_here)
-* [C - Functions](link_here)
-* [Learning to Program in C (Part 06)](link_here) (stop at 14:00)
-* [What is a function prototype](link_here) (read only the “Function prototype paragraph”)
-* [What is the purpose of a function prototype?](link_here)
-* [C - Header Files](link_here) (stop before the “Once-Only Headers” paragraph)
+* [Nested while loops](https://intranet.hbtn.io/rltoken/XR1FqLCngwWdV5-sOcTkYA)
+* [C - Functions](https://intranet.hbtn.io/rltoken/ZrhtaM9n50dtKqY7_oC9hQ)
+* [Learning to Program in C (Part 06)](https://intranet.hbtn.io/rltoken/znVekiyJaZQ12d15MhS8fQ) (stop at 14:00)
+* [What is a function prototype](https://intranet.hbtn.io/rltoken/5LM45CAPlfwlu5Q3eCctAg) (read only the “Function prototype paragraph”)
+* [What is the purpose of a function prototype?](https://intranet.hbtn.io/rltoken/SuqVH2cku18AiywqUIrgVA)
+* [C - Header Files](https://intranet.hbtn.io/rltoken/erpTD0m97ydWAVtyyGkbRA) (stop before the “Once-Only Headers” paragraph)
 
 ## Learning Objectives <a name="Learning-Objectives"></a>
 
