@@ -3,7 +3,7 @@
  * _isdigit - display digit or letter
  *@c: display 0: and a:
  *
- * Return: digit or no 
+ * Return: digit or no
  */
 int _isdigit(int c)
 {
