@@ -19,6 +19,7 @@ char *leet(char *i)
 			if (*i == let[a])
 			{
 				*i = remp[a];
+				break;
 			}
 		}
 		i++;
