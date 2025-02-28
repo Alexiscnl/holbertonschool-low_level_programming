@@ -7,22 +7,20 @@
  */
 char *leet(char *i)
 {
-	char *copy = i;
+	int j, a;
 	char let[] = "aAeEoOtTlL";
 	char remp[] = "4433007711";
-	int a;
 
-	for (; *i != '\0'; i++)
+	for (j = 0; i[j]; j++)
 	{
-		for (a = 0; let[a] != '\0'; a++)
+		for (a = 0; let[a]; a++)
 		{
-			if (*i == let[a])
+			if (i[j] == let[a])
 			{
-				*i = remp[a];
+				i[j] = remp[a];
 				break;
 			}
 		}
-		i++;
 	}
-	return (copy);
+	return i;
 }
