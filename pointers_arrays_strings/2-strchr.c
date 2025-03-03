@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * _strchr - Find the first occurrence of a character in a string
  *@s: The string to search
@@ -17,5 +18,5 @@ if (s[i] == c)
 return (s + i);
 }
 }
-return ('\0');
+return (NULL);
 }
