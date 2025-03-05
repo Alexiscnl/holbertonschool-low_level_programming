@@ -38,12 +38,6 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - The prototypes of all your functions and the prototype of the function `_putchar` should be included in your header file called `main.h` 📂.
 - Don’t forget to push your header file 🔁.
 
-## Compilation 🛠️
-
-To compile your program, use the following command:
-
-```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o output
 
 -----
 
@@ -66,9 +60,4 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o output
 - The prototypes of all your functions and the prototype of the function `_putchar` should be included in your header file called `main.h` 📂.
 - Don’t forget to push your header file 🔄.
 
-## COMPILATION🔧
 
-To compile your program, use the following command:
-
-```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o output
