@@ -60,4 +60,32 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - The prototypes of all your functions and the prototype of the function `_putchar` should be included in your header file called `main.h` 📂.
 - Don’t forget to push your header file 🔄.
 
+----
+# C - Pointer to Pointer and Multidimensional Arrays 🧑‍💻📚
 
+## Project Overview 🔍
+
+This project focuses on understanding the concepts of **Pointers to Pointers** and **Multidimensional Arrays** in C programming. By the end of the project, you should be able to explain these concepts and manipulate strings using the standard C library functions.
+
+## Learning Objectives 🎯
+
+By the end of this project, you are expected to explain the following concepts to anyone without the help of Google:
+
+- **Pointers to Pointers**: What they are and how to use them. 🧭
+- **Multidimensional Arrays**: What they are and how to use them in C. 🔢
+- The most common **C standard library functions** to manipulate strings. 💻
+
+## Resources 📚
+
+### Read or Watch 📖:
+
+- [C - Pointer to Pointer](https://intranet.hbtn.io/rltoken/YoasQWf5LbinwueEzXlghw)
+- [C – Pointer to Pointer with Example](https://intranet.hbtn.io/rltoken/mLxqSzYyRIO3jGMy_MwxDA)
+- [Multidimensional Arrays in C](https://intranet.hbtn.io/rltoken/DCKFJFt4UwqEWwktR4T4Ug)
+- [Two Dimensional (2D) Arrays in C Programming with Example](https://intranet.hbtn.io/rltoken/jY3lkOKQk81XgkkOe1qp2Q)
+
+## Requirements 📝
+
+### General Requirements:
+- **Allowed editors**: vi, vim, emacs 💻
+- All your files will be compiled on *
