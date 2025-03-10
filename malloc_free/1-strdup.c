@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /**
  * _strdup - Creates a duplicate of a string.
  * @str: The string to duplicate.
@@ -12,19 +11,25 @@ char *_strdup(char *str)
 {
 	int i;
 	char *dup;
+	int len;
 
 	if (str == 0)
 	{
 		return (NULL);
 	}
 
-	dup = malloc(sizeof(char) * (strlen(str) + 1));
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+
+	dup = malloc(sizeof(char) * (len + 1));
 	if (dup == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; i < len; i++)
 	{
 		dup[i] = str[i];
 	}
