@@ -4,8 +4,14 @@ a.out
 *.out
 *.exe
 
-# Ignorer tous les fichiers sans extension (considérés comme exécutables)
-[^.]*
+# Ignorer les fichiers de logs et de debug
+*.log
+*.dbg
+
+# Ignorer les fichiers temporaires
+*.swp
+*.swo
+*~
 
 # Autoriser les fichiers source et README
 !*.c
