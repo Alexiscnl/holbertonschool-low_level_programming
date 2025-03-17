@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stdio.h>
+#include <string.h>
 /**
  * get_op_func - Selects the correct operation function
  * @s: The operator as a string
