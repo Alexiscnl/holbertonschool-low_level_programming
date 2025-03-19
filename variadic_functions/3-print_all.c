@@ -10,7 +10,10 @@ void type_c(va_list *args)
 {
 	printf("%c", va_arg(*args, int));
 }
-
+/**
+ * type_f - Prints a float
+ * @args: The list of arguments
+ */
 void type_f(va_list *args)
 {
 	printf("%f", va_arg(*args, double));
@@ -30,6 +33,7 @@ void type_i(va_list *args)
 void type_s(va_list *args)
 {
 	char *str = va_arg(*args, char *);
+
 	if (str == NULL)
 	{
 		printf("(nil)");
@@ -60,7 +64,7 @@ void print_all(const char *const format, ...)
 
 	va_start(args, format);
 
-	while (format[i])
+	while (format && format[i] != NULL)
 	{
 		while (arr[j].type != '\0')
 		{
