@@ -3,81 +3,46 @@
 #include <stdarg.h>
 #include <string.h>
 /**
- * type_c - Prints a character.
- * @args: The list of arguments passed to the function.
- */
-void type_c(va_list *args)
-{
-	printf("%c", va_arg(*args, int));
-}
-/**
- * type_f - Prints a float
- * @args: The list of arguments
- */
-void type_f(va_list *args)
-{
-	printf("%f", va_arg(*args, double));
-}
-/**
- * type_i - Prints an integer.
- * @args: The list of arguments passed to the function.
- */
-void type_i(va_list *args)
-{
-	printf("%d", va_arg(*args, int));
-}
-/**
- * type_s - Prints a string. If the string is NULL, it prints (nil).
- * @args: The list of arguments passed to the function.
- */
-void type_s(va_list *args)
-{
-	char *str = va_arg(*args, char *);
-
-	if (str == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s", str);
-}
-/**
- * print_all - Prints anything based on the format specified.
- * @format: A string representing the argument types.
- *
- * This function takes in a string `format` containing the types of the
- * arguments that follow. It supports the following types:
- * 'c' for char, 'i' for integer, 'f' for float, and 's' for string.
+ * print_all - Prints different types of arguments based on a format string
+ * @format: A string representing the types of arguments passed to the function
  */
 void print_all(const char *const format, ...)
 {
-	print_type arr[] = {
-	    {'c', type_c},
-	    {'f', type_f},
-	    {'i', type_i},
-	    {'s', type_s},
-	    {0, NULL}};
-
 	va_list args;
-	int i = 0, j;
-	char *sep = "";
+	int i = 0;
+	int add = 0;
+	char *str;
 
 	va_start(args, format);
 
-	while (format[i])
+	while (format[i] != '\0')
 	{
-		while (arr[j].type != '\0')
+		if (add && (format[i] == 'c' || format[i] == 'f' || format[i] == 'i'
+		|| format[i] == 's'))
 		{
-			if (arr[j].type == format[i])
-			{
-				printf("%s", sep);
-				arr[j].print_func(&args);
-				sep = ", ";
-
-			}
-			j++;
+		printf(", ");
 		}
-		j = 0;
+
+		switch (format[i])
+		{
+		case 'c':
+			printf("%c", va_arg(args, int));
+			add = 1;
+			break;
+		case 'f':
+			printf("%f", va_arg(args, double));
+			add = 1;
+			break;
+		case 'i':
+			printf("%d", va_arg(args, int));
+			add = 1;
+			break;
+		case 's':
+			str = va_arg(args, char *);
+			printf("%s", str ? str : "(nil)");
+			add = 1;
+			break;
+		}
 		i++;
 	}
 	printf("\n");
