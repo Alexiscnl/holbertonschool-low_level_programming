@@ -12,25 +12,15 @@ void print_all(const char *const format, ...)
 	int i = 0;
 	int add = 0;
 	char *str;
-	
-	if (format == NULL)
-	{
-		printf("\n");
-		return;
-	}
-
-
 
 	va_start(args, format);
-
-	while (format[i] != '\0')
+	while (format && format[i] != '\0')
 	{
-		if (add && (format[i] == 'c' || format[i] == 'f' || format[i] == 'i'
-		|| format[i] == 's'))
+		if (add && (format[i] == 'c' || format[i] == 'f' ||
+		format[i] == 'i' || format[i] == 's'))
 		{
-		printf(", ");
+			printf(", ");
 		}
-
 		switch (format[i])
 		{
 		case 'c':
