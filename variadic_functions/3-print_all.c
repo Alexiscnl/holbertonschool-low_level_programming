@@ -12,6 +12,14 @@ void print_all(const char *const format, ...)
 	int i = 0;
 	int add = 0;
 	char *str;
+	
+	if (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
+
+
 
 	va_start(args, format);
 
