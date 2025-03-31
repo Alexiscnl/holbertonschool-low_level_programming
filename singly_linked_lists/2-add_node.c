@@ -12,7 +12,7 @@ int _lenght(char *b)
 {
 	int a = 0;
 
-	while(*b++)
+	while (*b++)
 	{
 		a++;
 	}
