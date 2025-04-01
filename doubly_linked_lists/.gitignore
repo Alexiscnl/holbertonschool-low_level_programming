@@ -3,7 +3,6 @@ a.out
 *.o
 *.out
 *.exe
-*main.c
 
 # Ignorer tous les fichiers sans extension (considérés comme exécutables)
 [^.]*
@@ -11,6 +10,7 @@ a.out
 # Autoriser les fichiers source et README
 !*.h
 !README.md
+!*.c
 
 # Ne pas ignorer les dossiers (pour permettre le suivi des fichiers dans les dossiers)
 !*/
