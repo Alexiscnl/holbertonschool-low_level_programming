@@ -67,8 +67,8 @@ int copy_file(const char *file_from, char *file_to)
 		close(fd_from);
 		close(fd_to);
 		exit(98); }
-	close(fd_from);
-	close(fd_to);
+	close_fd(fd_from);
+	close_fd(fd_to);
 	return (0);
 }
 /**
