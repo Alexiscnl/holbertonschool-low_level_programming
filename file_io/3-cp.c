@@ -31,13 +31,15 @@ int copy_file(const char *file_from, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
-
+	else
+	{
+		dprintf(STDERR_FILENO, "File %s opened successfuly for wrting\n", file_to);
+	}
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		close(fd_from);
-		exit(99);
-	}
+		exit(99); }
 	while ((bytes_read = read(fd_from, buffer, 1024)) > 0)
 	{
 		bytes_writen = write(fd_to, buffer, bytes_read);
@@ -46,16 +48,14 @@ int copy_file(const char *file_from, char *file_to)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			close(fd_from);
 			close(fd_to);
-			exit(99);
-		}
+			exit(99); }
 	}
 	if (bytes_read == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		close(fd_from);
 		close(fd_to);
-		exit(98);
-	}
+		exit(98); }
 	close(fd_from);
 	close(fd_to);
 	return (0);
