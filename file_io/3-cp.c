@@ -35,7 +35,7 @@ exit(100);
  */
 int copy_file(const char *file_from, char *file_to)
 {
-	int fd_from, fd_to = -1;
+	int fd_from, fd_to;
 	char buffer[1024];
 	ssize_t bytes_read, bytes_writen;
 
@@ -66,7 +66,7 @@ int copy_file(const char *file_from, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		close(fd_from);
 		close(fd_to);
-		exit(98); }
+		exit(99); }
 	close(fd_from);
 	close(fd_to);
 	return (0);
