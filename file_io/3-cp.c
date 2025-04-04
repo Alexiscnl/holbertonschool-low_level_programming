@@ -3,6 +3,14 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include "main.h"
+void close_fd(int fd)
+{
+	if (close(fd) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+        exit(100);
+	}
+}
 /**
  * copy_file - Copies the content of one file to another.
  * @file_from: The source file to copy from.
@@ -30,10 +38,6 @@ int copy_file(const char *file_from, char *file_to)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
-	}
-	else
-	{
-		dprintf(STDERR_FILENO, "File %s opened successfuly for wrting\n", file_to);
 	}
 	if (fd_to == -1)
 	{
