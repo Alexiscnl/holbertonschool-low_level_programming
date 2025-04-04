@@ -3,12 +3,20 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include "main.h"
+/**
+ * close_fd - Attempts to close a file descriptor and exits with code 100 if
+ *failure.
+ * @fd: The file descriptor to be closed.
+ *
+ * This function ensures that the file descriptor is properly closed. If not,
+ * it prints an error message and exits with code 100.
+ */
 void close_fd(int fd)
 {
 	if (close(fd) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-        exit(100);
+exit(100);
 	}
 }
 /**
