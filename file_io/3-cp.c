@@ -35,7 +35,7 @@ exit(100);
  */
 int copy_file(const char *file_from, char *file_to)
 {
-	int fd_from, fd_to;
+	int fd_from, fd_to = -1;
 	char buffer[1024];
 	ssize_t bytes_read, bytes_writen;
 
