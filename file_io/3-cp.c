@@ -50,7 +50,7 @@ int copy_file(const char *file_from, char *file_to)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		close(fd_from);
-		exit(98);
+		exit(99);
 	}
 	while ((bytes_read = read(fd_from, buffer, 1024)) > 0)
 	{
