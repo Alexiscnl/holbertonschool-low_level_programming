@@ -54,7 +54,7 @@ int copy_file(const char *file_from, char *file_to)
 	while ((bytes_read = read(fd_from, buffer, 1024)) > 0)
 	{
 		bytes_writen = write(fd_to, buffer, bytes_read);
-		if (bytes_writen == -1)
+		if (bytes_writen == -1 || bytes_writen != bytes_read)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			close(fd_from);
